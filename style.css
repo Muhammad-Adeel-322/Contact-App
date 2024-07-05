@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #0066ff, #00cc99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-position 0.1s ease;
+    background-size: 200% 200%;
+    position: relative;
+}
+.container {
+    background: #f3f4f6;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0px gray;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h1 {
+    color: #0066ff;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+form input {
+    padding: 12px;
+    border: 2px solid #0066ff;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #00cc99;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    background: #0066ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+
+form button:hover {
+    background: #00cc99;
+    transform: scale(1.05);
+}
+
+#search-input {
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #0066ff;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s linear;
+}
+
+#search-input:focus {
+    border-color: #00cc99;
+}
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-item {
+    background: #e0e7ff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: grab;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.contact-item.new {
+    background: #c7e9ff;
+}
+
+.contact-item.dragging {
+    opacity: 0.5;
+    transform: rotate(5deg);
+}
+
+.contact-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0066ff;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-actions button:hover {
+    color: #00cc99;
+    transform: scale(1.2);
+}
+
+.favorite {
+    color: #ffd700;
+}
+
+.submission-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.submission-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+.fovorit{
+    width: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid black;
+}
+.disp{
+    display: none;
+}
