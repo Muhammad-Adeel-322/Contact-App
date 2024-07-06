@@ -17,7 +17,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone [https://muhammad-adeel-322.github.io/Contact-App.git]
+git clone https://muhammad-adeel-322.github.io/Contact-App/
 Navigate to the project directory:
 
 bash
